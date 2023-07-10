@@ -6,9 +6,17 @@ namespace App123
 {
     public partial class App : Application
     {
+        public String DatabasePath;
         public App()
         {
             InitializeComponent();
+
+            MainPage = new NavigationPage(new MainPage());
+        }
+        public App(String databasePath)
+        {
+            InitializeComponent();
+            DatabasePath = databasePath;
 
             MainPage = new NavigationPage(new MainPage());
         }
